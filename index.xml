@@ -13,7 +13,7 @@
         <pubDate>Fri, 31 Oct 2025 22:23:01 +0800</pubDate>
         
         <guid>https://sEvilDragon.github.io/p/~%E7%A7%91%E4%B8%AD%E8%80%83%E6%A0%B8%E7%94%B5%E5%AD%90%E7%90%B4%E9%85%B1%E6%8B%AF%E6%95%91%E8%AE%A1%E5%88%92~/</guid>
-        <description>&lt;img src="https://sEvilDragon.github.io/p/~%E7%A7%91%E4%B8%AD%E8%80%83%E6%A0%B8%E7%94%B5%E5%AD%90%E7%90%B4%E9%85%B1%E6%8B%AF%E6%95%91%E8%AE%A1%E5%88%92~/cover.jpg" alt="Featured image of post ~科中考核电子琴酱拯救计划~" /&gt;&lt;p&gt;首先，我是新手！
+        <description>&lt;img src="https://sEvilDragon.github.io/cover1.jpg" alt="Featured image of post ~科中考核电子琴酱拯救计划~" /&gt;&lt;p&gt;首先，我是新手！
 首先，我是新手！！
 首先，我是新手！！！
 &lt;em&gt;（重要的事情说三遍！）&lt;/em&gt;
@@ -93,7 +93,21 @@ SSD1306（7线）&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;考核原理图：![[图片1.png]]&lt;/li&gt;
+&lt;li&gt;考核原理图
+&lt;img src=&#34;https://sEvilDragon.github.io/p/~%E7%A7%91%E4%B8%AD%E8%80%83%E6%A0%B8%E7%94%B5%E5%AD%90%E7%90%B4%E9%85%B1%E6%8B%AF%E6%95%91%E8%AE%A1%E5%88%92~/%E5%9B%BE%E7%89%871.png&#34;
+	width=&#34;1863&#34;
+	height=&#34;1321&#34;
+	srcset=&#34;https://sEvilDragon.github.io/p/~%E7%A7%91%E4%B8%AD%E8%80%83%E6%A0%B8%E7%94%B5%E5%AD%90%E7%90%B4%E9%85%B1%E6%8B%AF%E6%95%91%E8%AE%A1%E5%88%92~/%E5%9B%BE%E7%89%871_hu_cd4acf1921359dfd.png 480w, https://sEvilDragon.github.io/p/~%E7%A7%91%E4%B8%AD%E8%80%83%E6%A0%B8%E7%94%B5%E5%AD%90%E7%90%B4%E9%85%B1%E6%8B%AF%E6%95%91%E8%AE%A1%E5%88%92~/%E5%9B%BE%E7%89%871_hu_75fac8099420a8ec.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;考核原理图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;338px&#34;
+	
+&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;esp-idf的使用&#34;&gt;ESP-IDF的使用
 &lt;/h2&gt;&lt;p&gt;简单介绍esp-idf插件的使用。&lt;/p&gt;
