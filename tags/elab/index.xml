@@ -13,10 +13,10 @@
         <pubDate>Fri, 31 Oct 2025 22:23:01 +0800</pubDate>
         
         <guid>https://sEvilDragon.github.io/p/electronic-piano-rescue-plan/</guid>
-        <description>&lt;img src="https://sEvilDragon.github.io/cover1.jpg" alt="Featured image of post ~科中考核电子琴酱拯救计划~" /&gt;&lt;p&gt;首先，我是新手！&lt;/p&gt;
-&lt;p&gt;首先，我是新手！！&lt;/p&gt;
-&lt;p&gt;首先，我是新手！！！&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;（重要的事情说三遍！）&lt;/em&gt;&lt;/p&gt;
+        <description>&lt;img src="https://sEvilDragon.github.io/cover1.jpg" alt="Featured image of post ~科中考核电子琴酱拯救计划~" /&gt;&lt;p&gt;首先，我是新手！&lt;br&gt;
+首先，我是新手！！&lt;br&gt;
+首先，我是新手！！！&lt;br&gt;
+&lt;em&gt;（重要的事情说三遍！）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;作为嵌入式新手，我的代码一定存在缺陷和不完美，实现的功能也十分基础，所以别让新人太难办呜呜呜~&lt;/p&gt;
 &lt;p&gt;本文将重点介绍有关于本次电子琴酱拯救计划的主要实现思路，没错，和论文写的截然不同，论文主要还是按照模板写的，而且为了字数有些语言不通顺，而博客就很随意了，嗯就是主这样~&lt;/p&gt;
 &lt;div style=&#34;text-align:center; color:rgb(255, 165, 0);&#34;&gt;&lt;strong&gt;
@@ -28,38 +28,19 @@
 &lt;h2 id=&#34;基本信息&#34;&gt;基本信息
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;关于本次考核电子琴酱，你最好知道：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;我使用了以下原件：ESP32-WROOM-32E-N4&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  		  SS8550
-
-  		  TTP229-BSF-16
-
-  		  WS2812B
-
-  		  TYPE-C 16PIN 2MD(073)
-
-  		  SSD1306（7线）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用官方在VScode上的插件ESP-IDF编程，配置为espidfv5.5&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;c语言&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;操作系统是Windows11 24H2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;本文中的AI均指代谷歌gemini&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;我的全部文件在github上发布：&lt;a class=&#34;link&#34; href=&#34;https://github.com/sEvilDragon/ELABelectronic-organ.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/sEvilDragon/ELABelectronic-organ.git&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;工程结构如下：&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;我使用了以下原件：ESP32-WROOM-32E-N4&lt;br&gt;
+SS8550&lt;br&gt;
+TTP229-BSF-16&lt;br&gt;
+WS2812B&lt;br&gt;
+TYPE-C 16PIN 2MD(073)&lt;br&gt;
+SSD1306（7线）&lt;/li&gt;
+&lt;li&gt;使用官方在VScode上的插件ESP-IDF编程，配置为espidfv5.5&lt;/li&gt;
+&lt;li&gt;c语言&lt;/li&gt;
+&lt;li&gt;操作系统是Windows11 24H2&lt;/li&gt;
+&lt;li&gt;本文中的AI均指代谷歌gemini&lt;/li&gt;
+&lt;li&gt;我的全部文件在github上发布：&lt;a class=&#34;link&#34; href=&#34;https://github.com/sEvilDragon/ELABelectronic-organ.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/sEvilDragon/ELABelectronic-organ.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;工程结构如下：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
