@@ -1482,7 +1482,13 @@ PWM初始化和发声函数：&lt;/p&gt;
 &lt;h2 style=&#34;text-align:center;color:rgb(255, 0, 0);&#34;&gt;&lt;strong&gt;感谢&lt;/strong&gt;&lt;/h2&gt;
 &lt;div style=&#34;text-align:center;&#34;&gt;&lt;strong&gt; 以上就是电子琴的全部，这是我第一次接触嵌入式，肯定有些地方做的不够到位，希望我能在后续的学习过程中不断专精。感谢你能观看这篇博客！ &lt;/strong&gt;&lt;/div&gt;
 &lt;center&gt;&lt;strong&gt;感谢所有学长提供的帮助！&lt;/strong&gt;&lt;/center&gt;
-</description>
+&lt;script src=&#34;https://utteranc.es/client.js&#34;
+        repo=&#34;sEvilDragon/blog_commend&#34;
+        issue-term=&#34;pathname&#34;
+        theme=&#34;github-light&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;</description>
         </item>
         <item>
         <title>归档</title>
