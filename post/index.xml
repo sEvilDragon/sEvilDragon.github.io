@@ -9,11 +9,11 @@
         <copyright>小恐龙大魔王!sEvil_Dragon</copyright>
         <lastBuildDate>Sun, 16 Nov 2025 14:05:01 +0800</lastBuildDate><atom:link href="https://sEvilDragon.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>~STM32连接aht20和ssd1680~</title>
-        <link>https://sEvilDragon.github.io/p/~stm32%E8%BF%9E%E6%8E%A5aht20%E5%92%8Cssd1680~/</link>
+        <link>https://sEvilDragon.github.io/p/stm32f103c8t6_week1/</link>
         <pubDate>Sun, 16 Nov 2025 14:05:01 +0800</pubDate>
         
-        <guid>https://sEvilDragon.github.io/p/~stm32%E8%BF%9E%E6%8E%A5aht20%E5%92%8Cssd1680~/</guid>
-        <description>&lt;img src="https://sEvilDragon.github.io/p/~stm32%E8%BF%9E%E6%8E%A5aht20%E5%92%8Cssd1680~/cover2.jpg" alt="Featured image of post ~STM32连接aht20和ssd1680~" /&gt;&lt;p&gt;开始书写我的第二份博客&lt;br&gt;
+        <guid>https://sEvilDragon.github.io/p/stm32f103c8t6_week1/</guid>
+        <description>&lt;img src="https://sEvilDragon.github.io/p/stm32f103c8t6_week1/cover2.jpg" alt="Featured image of post ~STM32连接aht20和ssd1680~" /&gt;&lt;p&gt;开始书写我的第二份博客&lt;br&gt;
 这次开始继续从stm32开始实地学习MCU，虽然说句实话感觉学的还是很不实在，属于是我和AI共同奋斗的结果&lt;/p&gt;
 &lt;div style=&#34;text-align:center; color:rgb(255, 165, 0);&#34;&gt;&lt;strong&gt;
 首先，我依然简单介绍一下ELAB！ELAB是大连理工大学电气创新实践基地，
