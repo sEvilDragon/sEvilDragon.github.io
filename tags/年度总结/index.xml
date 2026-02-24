@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>年度总结 on 小恐龙大魔王！—sEvil_Dragon</title>
+        <link>http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+        <description>Recent content in 年度总结 on 小恐龙大魔王！—sEvil_Dragon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>小恐龙大魔王!sEvil_Dragon</copyright>
+        <lastBuildDate>Tue, 24 Feb 2026 20:57:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2025年度总结</title>
+        <link>http://localhost:1313/p/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+        <pubDate>Tue, 24 Feb 2026 20:57:01 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/2025%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+        <description>&lt;img src="http://localhost:1313/cover3.jpg" alt="Featured image of post 2025年度总结" /&gt;&lt;p&gt;按理来说，这个总结应该是一月份的活，但当时实在是不知道该怎么写，我语言能力十分有限，而对于刚刚进入大学的我而言，我的不足很多，能拿出来说说的东西也很少，让我作总结，那我必然写不出什么。&lt;/p&gt;
+&lt;h2 id=&#34;这一年我做了什么&#34;&gt;这一年我做了什么？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;参加了高考，并且超常发挥&lt;/strong&gt;！来到了&lt;strong&gt;大连理工&lt;/strong&gt;大学，在大学中加入了&lt;strong&gt;ELAB&lt;/strong&gt;！&lt;/li&gt;
+&lt;li&gt;简单&lt;strong&gt;学习了c/cpp核心语法基础&lt;/strong&gt;，能使用代码简单实现功能。&lt;/li&gt;
+&lt;li&gt;ELAB招新考核编写&lt;strong&gt;ESP32的电子琴&lt;/strong&gt;，第一次接触嵌入式编程并完成了所有指标功能。&lt;/li&gt;
+&lt;li&gt;2026&lt;strong&gt;嵌赛&lt;/strong&gt;选择&lt;strong&gt;海思赛道&lt;/strong&gt;，并在校电赛期间用ws63实现了基础功能！&lt;/li&gt;
+&lt;li&gt;寒假期间简单&lt;strong&gt;学习前端三件套&lt;/strong&gt;，对其基础知识有简单认识。&lt;/li&gt;
+&lt;li&gt;寒假完成ELAB的&lt;strong&gt;多人游戏开发项目&lt;/strong&gt;，积攒了SFML3图形库开发经验和多人github&lt;strong&gt;合作经验&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;还有哪些不足&#34;&gt;还有哪些不足？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;语言知识严重不足&lt;/strong&gt;，原来我认为学完语法也就是语言学完了，剩下了是运用的事情，但我发现完全不是这样，语法真的只是语言最基础的入门，更何况我连语法都用不习惯！我必须进一步深化知识框架，首先，我得放慢脚步，&lt;strong&gt;把CPP搞得再明白一些&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;嵌入式探索深度不够&lt;/strong&gt;，时至今日，我已经很久没有再接触海思，这几天我必须再熟悉一下，过去，我的嵌入式都停留在最基础的实现，比如调用一个模块，但这远远不够，我必须发挥单片机本身的实力比如网络蓝牙等才行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;我接下来有什么打算&#34;&gt;我接下来有什么打算？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;首先就是&lt;strong&gt;继续学习&lt;/strong&gt;！我要继续学习算法和语法规范等，我在bilibili观看相关视频，并且买入了《effective c++》，作为继续学习的知识来源！&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;以赛促学&lt;/strong&gt;，继续完成&lt;strong&gt;海思音响&lt;/strong&gt;的代码实现，充分利用海思网络特性，并改变代码结构，将所有代码改为cpp风格。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总之，这一年发生了很多，但远远不够！我很感激发生的一切，也对我的所作所为感到满意，但我任需要继续向前！&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

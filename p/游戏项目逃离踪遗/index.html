@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="该游戏项目是ELAB的大一寒假多人协作趣味项目，同时也作为计拔尖大一寒假游戏制作作业。同时也是我学习cpp后的第一个由cpp完成的项目。个人认为还是很有意义的吧？虽然做得很简陋吧~\n">
+<title>游戏项目《逃离踪遗》</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="游戏项目《逃离踪遗》">
+<meta property='og:description' content="该游戏项目是ELAB的大一寒假多人协作趣味项目，同时也作为计拔尖大一寒假游戏制作作业。同时也是我学习cpp后的第一个由cpp完成的项目。个人认为还是很有意义的吧？虽然做得很简陋吧~\n">
+<meta property='og:url' content='http://localhost:1313/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/'>
+<meta property='og:site_name' content='小恐龙大魔王！—sEvil_Dragon'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ELAB' /><meta property='article:tag' content='计科院' /><meta property='article:published_time' content='2026-02-24T22:23:01&#43;08:00'/><meta property='article:modified_time' content='2026-02-24T22:23:01&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/cover4.png' />
+<meta name="twitter:title" content="游戏项目《逃离踪遗》">
+<meta name="twitter:description" content="该游戏项目是ELAB的大一寒假多人协作趣味项目，同时也作为计拔尖大一寒假游戏制作作业。同时也是我学习cpp后的第一个由cpp完成的项目。个人认为还是很有意义的吧？虽然做得很简陋吧~\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/cover4.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_78105d704d9c0801.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">小恐龙大魔王！—sEvil_Dragon</a></h1>
+            <h2 class="site-description">欢迎访问，这里是@小恐龙大魔王（sEvil_Dragon）的个人博客，由hugo(stack)与github搭建，用于个人分享与记录~</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/503735559?spm_id_from=333.1007.0.0'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92.02C65.57 463.2 43.81 454.2 26.74 436.8C9.682 419.4 .7667 396.5 0 368.2V169.8C.7667 143.8 9.682 122.2 26.74 104.1C43.81 87.75 65.57 78.77 92.02 78H121.4L96.05 52.19C90.3 46.46 87.42 39.19 87.42 30.4C87.42 21.6 90.3 14.34 96.05 8.603C101.8 2.868 109.1 0 117.9 0C126.7 0 134 2.868 139.8 8.603L213.1 78H301.1L375.6 8.603C381.7 2.868 389.2 0 398 0C406.8 0 414.1 2.868 419.9 8.603C425.6 14.34 428.5 21.6 428.5 30.4C428.5 39.19 425.6 46.46 419.9 52.19L394.6 78L423.9 78C450.3 78.77 471.9 87.75 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.05C86.46 140.9 78.6 144.2 72.47 150.3C66.33 156.4 63.07 164.2 62.69 173.8V368.2C62.69 377.4 65.95 385.2 72.47 391.7C78.99 398.2 86.85 401.5 96.05 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z"/></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/sEvilDragon'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="438.549px" height="438.549px" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
+	 xml:space="preserve">
+<g>
+	<path d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+		c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
+		c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
+		c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
+		c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
+		c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
+		c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
+		c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
+		c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
+		c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
+		c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
+		c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
+		c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
+		c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
+		c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
+		c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
+		c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
+		c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
+		c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
+		C438.536,184.851,428.728,148.168,409.132,114.573z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#基本信息">基本信息</a></li>
+    <li><a href="#说明">说明</a></li>
+    <li><a href="#具体实现">具体实现</a>
+      <ol>
+        <li><a href="#github协作">github协作</a></li>
+        <li><a href="#获取sfml">获取SFML</a></li>
+        <li><a href="#异常管理办法">异常管理办法</a></li>
+        <li><a href="#文字逐个出现的动效实现">文字逐个出现的动效实现</a></li>
+        <li><a href="#视角跟随鼠标动效实现">视角跟随鼠标动效实现</a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/">
+                <img src="/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/cover4_hu_dc349da22e009942.png"
+                        srcset="/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/cover4_hu_dc349da22e009942.png 800w, /p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/cover4_hu_f63778f58ac0debd.png 1600w"
+                        width="800" 
+                        height="469" 
+                        loading="lazy"
+                        alt="Featured image of post 游戏项目《逃离踪遗》" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E9%80%83%E7%A6%BB%E8%B8%AA%E9%81%97/">游戏项目《逃离踪遗》</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-02-24</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>该游戏项目是ELAB的大一寒假多人协作趣味项目，同时也作为计拔尖大一寒假游戏制作作业。同时也是我学习cpp后的第一个由cpp完成的项目。个人认为还是很有意义的吧？虽然做得很简陋吧~</p>
+<div style="text-align:center; color:rgb(255, 165, 0);"><strong>
+同样，我依然简单介绍一下ELAB！ELAB是大连理工大学电气创新实践基地，
+原先为科技中心
+</strong></div>
+<div style="text-align:center; color:rgb(255, 165, 0);"><strong>
+故也称为“科中”~
+</strong></div>
+<h2 id="基本信息">基本信息
+</h2><ul>
+<li>语言：c++20标准（但其实没用啥新特性）</li>
+<li>图形库：SFML3.0.2</li>
+<li>编译器：MSVL</li>
+<li>github：https://github.com/Xiaoyaof-Team/RunawayTechBuilding1.git</li>
+</ul>
+<p>你可能会好奇，为什么采用这样的配置，其实很简单，因为我学习的SFML教程是这样的~
+顺带一提教程是BV1tL2TBEETM，基础的cmake配置和视频中一致</p>
+<h2 id="说明">说明
+</h2><p>游戏本身是类《13F》的找异常游戏，完成度适中。   <br>
+由于项目是入门级项目，本身难度不高，因此不会详细说明大体实现，而是着重讲一些具体实现。
+所有图像都是AI作的，，不许嫌弃美观喵~</p>
+<h2 id="具体实现">具体实现
+</h2><h3 id="github协作">github协作
+</h3><p>根据ELAB寒假项目要求，本作需要使用github进行多人协作。由于人数有限并且对github不够熟悉，实际上并没有过多的功能，主要是我创建了属于自己的副本，然后再推送到大的项目中合并，因此不再展开。</p>
+<h3 id="获取sfml">获取SFML
+</h3><p>其实最开始时，SFML库是直接官网下载的，但我并没有搞清楚怎么实现引用，因此最后依然采用了教程中的方法进行cmake网络拷贝库文件。因此也不再展开。</p>
+<h3 id="异常管理办法">异常管理办法
+</h3><p>虽然我们做的是一个小游戏，但如果每个异常都要复制基础代码的话作为写码的我肯定不会舒服。但是由于本人的cpp水平就是和看了看黑马程序员的视频，似乎有更高级的方法，但是我不会，所以选择了类与多态的方法实现。 <br>
+起初，考虑到了玩一局下来不是所有异常都会出现，所有学习了动态创建类的方法。但实际上最后导致了每次加载异常纹理时会导致卡顿的问题，适得其反，而我又不会优化方法也没时间研究优化方法，所以目前也就不了了之了。</p>
+<p>异常管理使用的是<strong>继承和多态</strong>。首先创建一个异常基类，这个基类所有函数均为虚函数，所有虚函数都包含无异常的基础实现，根据继承原则，子类可以被父类指针指向但是父类指针不能访问子类新函数的特性，动态改变指针当前的指向，实现了异常的管理。因此异常只需要改写需要改写的函数，而不是重新复制一份基础类。</p>
+<p>由于是合作项目，在创建异常框架时特意进行了细分。为了方便别人写异常函数，将几乎所有初始化和更新进行了大量拆分，比如说设置位置（set）的函数，每个东西的定位函数完全分离，这样就可以实现改写一个东西的位置不需要管这个页面其他的东西是怎么放置的。但这样处理后存在一个问题，由于异常类和基础场景实现在代码上是分离的，基础实现由于先于异常管理实现，异常管理中的所有函数实际上都是指向基础实现函数的指针，这样的问题就是虽然子类改写了某一个东西的定位，但是总体的定位函数（调用了所有小的定位函数）其实是调用了基础实现中的定位函数，而基础实现中的定位函数使用的是基础实现中的其他子定位函数，但子类改写的是父类也就是异常类的子定位函数，使得调用没有生效。为了解决这个问题，将基础实现中的大部分综合实现函数全部转移至异常大类中实现。</p>
+<p>为了实现异常的随机且不重复性，每个异常对应了一个bool值，只有bool值为false时才能被随机到。</p>
+<h3 id="文字逐个出现的动效实现">文字逐个出现的动效实现
+</h3><p>在异常2中添加了类似对话框的文字逐个出现的动效，总体是根据时间截取字符串长度实现的。 <br>
+下面放出基本实现。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">sEvil_Dragon</span><span class="o">::</span><span class="n">sEvil_Dragon_AnimateText</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">wstring</span> <span class="o">&amp;</span><span class="n">newString</span><span class="p">,</span> <span class="kt">float</span> <span class="n">deltatime</span><span class="p">,</span> <span class="n">sf</span><span class="o">::</span><span class="n">Vector2f</span> <span class="n">position</span><span class="p">,</span> <span class="kt">float</span> <span class="n">displayDuration</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="n">sf</span><span class="o">::</span><span class="n">Color</span> <span class="n">color</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">is_sEvil_dragon_text_animating</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 如果已经显示全了，直接退出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">sEvil_dragon_text_index</span> <span class="o">&gt;=</span> <span class="n">newString</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text_finished</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">sEvil_dragon_text_timer</span> <span class="o">+=</span> <span class="n">deltatime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">hasChanged</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用 while 循环：如果 deltatime 很大，可以一帧弹出多个字符，保证显示速度恒定
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="n">sEvil_dragon_text_timer</span> <span class="o">&gt;=</span> <span class="n">displayDuration</span> <span class="o">&amp;&amp;</span> <span class="n">sEvil_dragon_text_index</span> <span class="o">&lt;</span> <span class="n">newString</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text_timer</span> <span class="o">-=</span> <span class="n">displayDuration</span><span class="p">;</span> <span class="c1">// 减去消耗的时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">sEvil_dragon_text_index</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hasChanged</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">hasChanged</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text</span><span class="p">.</span><span class="n">setString</span><span class="p">(</span><span class="n">newString</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sEvil_dragon_text_index</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fontfSound</span><span class="p">.</span><span class="n">play</span><span class="p">();</span> <span class="c1">// 每次显示新字符时播放音效
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">auto</span> <span class="n">bounds</span> <span class="o">=</span> <span class="n">sEvil_dragon_text</span><span class="p">.</span><span class="n">getLocalBounds</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text</span><span class="p">.</span><span class="n">setOrigin</span><span class="p">(</span><span class="n">bounds</span><span class="p">.</span><span class="n">position</span> <span class="o">+</span> <span class="n">bounds</span><span class="p">.</span><span class="n">size</span> <span class="o">/</span> <span class="mf">2.f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text</span><span class="p">.</span><span class="n">setPosition</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text</span><span class="p">.</span><span class="n">setCharacterSize</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sEvil_dragon_text</span><span class="p">.</span><span class="n">setFillColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里根据AI的建议，使用while循环以处理一个帧时间达到了多个文字出现的条件情况发生，同时，记录这句话到哪了的index而不是使用时间对应长度的方法决定当前显示多少个字是出于方便考虑，后续还添加了空格键可以快速跳出文字和跳转下一句话的功能，直接用当前显示到第几个字了要方便且好理解很多。<br>
+下面展示一下空格快速补全的代码实现</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="n">code</span> <span class="o">==</span> <span class="n">sf</span><span class="o">::</span><span class="n">Keyboard</span><span class="o">::</span><span class="n">Key</span><span class="o">::</span><span class="n">Space</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 如果当前动画没有播放完，直接将动画设置为完成
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">sEvil_dragon_text_finished</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sEvil_dragon_text_index</span> <span class="o">=</span> <span class="n">dialogues_ptr</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sEvil_dragon_text_finished</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">is_sEvil_dragon_text_animating</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 如果动画已经播放完了，播放下一个对话
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">current_dialogue_index</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">current_dialogue_index</span> <span class="o">&lt;=</span> <span class="n">sEvil_dragon_dialogues_1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dialogues_ptr</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">wstring</span><span class="o">&gt;</span><span class="p">(</span><span class="n">sEvil_dragon_dialogues_1</span><span class="p">[</span><span class="n">current_dialogue_index</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">sEvil_Dragon_ResetTextAnimation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 没有更多对话了，不作任何处理，并标记当前对话已经全部完成
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这是整个事件处理（HandleEvent）函数的一部分，该函数返回bool值，说明该事件是否已经被处理了。</p>
+<h3 id="视角跟随鼠标动效实现">视角跟随鼠标动效实现
+</h3><p>一开始时，我就很希望视角并不是牢牢固定在人物身上的，而是带有一定的动效，除了视角本身带有三角函数的上下波动外，还添加了视角会向鼠标靠近的动效，其实现也很好理解，首先，每一帧会记录鼠标和人物（画面正中心）的相对位置，然后根据一定的比例算出目标偏离点在哪里，再减去提前记录下来的上一次视角相较于人物的偏移值，再根据余下距离的自然数幂的公式计算出这一帧要偏离多少。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">    <span class="c1">// 计算相机跟随鼠标水平的偏移
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">c_gameState</span><span class="p">.</span><span class="n">is_Mouse_Follow_Camera</span> <span class="o">==</span> <span class="sa">L</span><span class="s">&#34;是&#34;</span> <span class="o">&amp;&amp;</span> <span class="n">c_menu</span><span class="p">.</span><span class="n">c_menuState</span><span class="p">.</span><span class="n">currentState</span> <span class="o">==</span> <span class="n">MenuState</span><span class="o">::</span><span class="n">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 产生动画效果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 计算鼠标偏移
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">float</span> <span class="n">mouseX_change</span> <span class="o">=</span> <span class="n">sf</span><span class="o">::</span><span class="n">Mouse</span><span class="o">::</span><span class="n">getPosition</span><span class="p">(</span><span class="n">c_window</span><span class="p">).</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">c_window</span><span class="p">.</span><span class="n">getSize</span><span class="p">().</span><span class="n">x</span> <span class="o">/</span> <span class="mf">2.f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 鼠标位移的比例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">float</span> <span class="n">offsetRatio</span> <span class="o">=</span> <span class="n">mouseX_change</span> <span class="o">/</span> <span class="p">(</span><span class="n">c_window</span><span class="p">.</span><span class="n">getSize</span><span class="p">().</span><span class="n">x</span> <span class="o">/</span> <span class="mf">2.f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 设置最大偏移的范围
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">float</span> <span class="n">maxOffset</span> <span class="o">=</span> <span class="mf">100.f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 计算目标最大偏移
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">float</span> <span class="n">sign</span> <span class="o">=</span> <span class="n">offsetRatio</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mf">1.f</span> <span class="o">:</span> <span class="o">-</span><span class="mf">1.f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">float</span> <span class="n">targetOffset</span> <span class="o">=</span> <span class="n">sign</span> <span class="o">*</span> <span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">offsetRatio</span><span class="p">))</span> <span class="o">*</span> <span class="n">maxOffset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 平滑过渡动画效果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">float</span> <span class="n">currentOffset</span> <span class="o">=</span> <span class="n">Last_distance_to_player</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">float</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">targetOffset</span> <span class="o">-</span> <span class="n">currentOffset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态计算平滑速度：距离越远，速度越快；距离越近，速度越慢
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">float</span> <span class="n">baseSpeed</span> <span class="o">=</span> <span class="mf">2.0f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">float</span> <span class="n">distanceFactor</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">/</span> <span class="n">maxOffset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">float</span> <span class="n">smoothSpeed</span> <span class="o">=</span> <span class="n">baseSpeed</span> <span class="o">+</span> <span class="mf">10.0f</span> <span class="o">*</span> <span class="n">distanceFactor</span> <span class="o">*</span> <span class="n">distanceFactor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Last_distance_to_player</span> <span class="o">=</span> <span class="n">currentOffset</span> <span class="o">+</span> <span class="n">diff</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0f</span> <span class="o">-</span> <span class="n">std</span><span class="o">::</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">smoothSpeed</span> <span class="o">*</span> <span class="n">deltaTime</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="总结">总结
+</h2><p>大概能讲讲的应该就是如此，总之，这是我作为新人入手的第一个还像点样子的项目，虽然充满各种不足但总体尚可~</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/elab/">ELAB</a>
+        
+            <a href="/tags/%E8%AE%A1%E7%A7%91%E9%99%A2/">计科院</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo=""
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 小恐龙大魔王!sEvil_Dragon
+    </section>
+    
+    <section class="powerby">
+        
+            Just Believe！！！ <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.a7b964895f17f30445f8790e5fb95a3704c7511d533bab6a32a3e6abd0feb413.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
